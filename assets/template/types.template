@@ -1,0 +1,4 @@
+export type Props = {
+    // component prop type
+    click: () => void;
+}

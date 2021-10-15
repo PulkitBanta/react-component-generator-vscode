@@ -1,0 +1,10 @@
+import { render } from '@test-utils';
+import React from 'react';
+import { Component } from './Component';
+
+describe('Component', () => {
+	it('should render properly', () => {
+		const { container } = render(<Component />);
+		expect(container).toMatchSnapshot();
+	})
+})
