@@ -46,7 +46,7 @@ export const addTemplateFiles = (
                 fs.readFile(templateDir() + file, (err, content) => {
                     if (err) {
                         window.showErrorMessage(
-                            'Error occurred while reading ' + file
+                            'Error occurred while creating the component'
                         );
                         return;
                     }
@@ -58,4 +58,5 @@ export const addTemplateFiles = (
             });
         }
     });
+    window.showInformationMessage('Component created');
 };

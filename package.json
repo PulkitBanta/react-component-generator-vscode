@@ -1,7 +1,7 @@
 {
-    "name": "medly-react-component-generator",
-    "displayName": "Medly-react-component-generator",
-    "description": "Create react components with this extension for medly products",
+    "name": "react-component-generator",
+    "displayName": "react-component-generator",
+    "description": "Generate react component with sample code in vscode",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.61.0"
@@ -10,13 +10,13 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:medly-react-component-generator.create-react-component"
+        "onCommand:react-component-generator.create-react-component"
     ],
     "main": "./out/extension.js",
     "contributes": {
         "commands": [
             {
-                "command": "medly-react-component-generator.create-react-component",
+                "command": "react-component-generator.create-react-component",
                 "title": "Create React Component"
             }
         ]
