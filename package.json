@@ -7,7 +7,7 @@
         "vscode": "^1.61.0"
     },
     "categories": [
-        "Other"
+        "Snippets"
     ],
     "activationEvents": [
         "onCommand:react-component-generator.create-react-component"
