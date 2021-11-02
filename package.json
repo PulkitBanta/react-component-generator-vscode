@@ -2,6 +2,7 @@
     "name": "react-component-generator",
     "displayName": "react-component-generator",
     "description": "Generate react component with sample code in vscode",
+    "publisher": "pulkitbanta",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.61.0"
