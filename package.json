@@ -1,15 +1,33 @@
 {
     "name": "react-component-generator",
-    "displayName": "react-component-generator",
+    "displayName": "React Component Generator",
     "description": "Generate react component with sample code in vscode",
     "publisher": "pulkitbanta",
     "version": "0.0.1",
+    "author": {
+        "name": "pulkit banta"
+    },
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "homepage": "https://github.com/PulkitBanta/react-component-generator-vscode/blob/main/README.md",
+    "bugs": {
+        "url": "https://github.com/PulkitBanta/react-component-generator-vscode/issues",
+        "email": "pulkitbanta01@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PulkitBanta/react-component-generator-vscode"
+    },
     "engines": {
         "vscode": "^1.61.0"
     },
     "categories": [
-        "Snippets"
+        "Snippets", "Programming Languages"
     ],
+    "icon": "images/logo.png",
+    "galleryBanner": {
+        "color": "#3e3e3e",
+        "theme": "dark"
+    },
     "activationEvents": [
         "onCommand:react-component-generator.create-react-component"
     ],
