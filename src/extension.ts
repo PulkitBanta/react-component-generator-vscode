@@ -1,7 +1,5 @@
-import { commands, ExtensionContext, window } from 'vscode';
+import { commands, window } from 'vscode';
 import { addTemplateFiles } from './helper';
-import path = require('path');
-import fs = require('fs');
 
 const componentPath = () =>
     window.showInputBox({
@@ -23,7 +21,7 @@ const validateInput = (val: any, errMessage: string): boolean => {
     return false;
 };
 
-export function activate(context: ExtensionContext) {
+export function activate() {
     commands.registerCommand('react-component-generator.create-react-component', () => {
         componentPath().then(path => {
             if (!validateInput(path, 'No path specified')) {

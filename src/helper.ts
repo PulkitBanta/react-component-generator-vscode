@@ -16,7 +16,7 @@ export const filePath = (templateFile: string, componentPath: string, componentN
 
 export const getWorkspaceFolder = (): string | undefined => {
     if (workspace.workspaceFolders !== undefined) {
-        let wf = workspace.workspaceFolders[0].uri.path;
+        const wf = workspace.workspaceFolders[0].uri.path;
         return wf + '/';
     } else {
         window.showErrorMessage('Try to run this command inside a workspace folder');
