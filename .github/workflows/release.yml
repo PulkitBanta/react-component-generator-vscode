@@ -16,7 +16,7 @@ jobs:
             - name: Setup node.js
               uses: actions/setup-node@v1
               with:
-                  node-version: ${{ secrets.NODE_VERSION }}
+                  node-version: 14.x
 
             - name: Install packages
               run: npm install
@@ -29,12 +29,12 @@ jobs:
                   echo "app version = v$APP_VERSION"
 
             - name: Build VSIX package
-              run: npm run build -- -o custom-profiles-for-vscode.v${{ steps.calculateVersion.outputs.AppVersion }}.vsix
+              run: npx vsce package
 
             - name: Publish extension package
               env:
                   VSCODE_MARKETPLACE_TOKEN: ${{ secrets.VSCODE_MARKETPLACE_TOKEN }}
-              run: npm run vsce -- publish -p $VSCODE_MARKETPLACE_TOKEN
+              run: npx vsce publish -p $VSCODE_MARKETPLACE_TOKEN
 
             - uses: actions/upload-artifact@v2
               name: Upload artifact
