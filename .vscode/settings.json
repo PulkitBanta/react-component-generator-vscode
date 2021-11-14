@@ -5,8 +5,13 @@
     "search.exclude": {
         "out": true
     },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.organizeImports": true
+    },
     "typescript.tsc.autoDetect": "off",
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
-    "html.format.wrapLineLength": 120
+    "html.format.wrapLineLength": 120,
+    "eslint.validate": ["javascript"]
 }

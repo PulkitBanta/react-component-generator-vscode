@@ -1,4 +1,7 @@
 {
+    "env": {
+        "node": true
+    },
     "root": true,
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -14,7 +17,17 @@
         "eqeqeq": "warn",
         "no-throw-literal": "warn",
         "semi": "off",
-        "prettier/prettier": ["error"]
+        "prettier/prettier": ["error"],
+        "no-unused-vars": "error",
+        "no-var": "error",
+        "no-undef": "error",
+        "prefer-const": "error",
+        "no-param-reassign": "error",
+        "@typescript-eslint/no-var-requires": 0,
+        "@typescript-eslint/ban-ts-ignore": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-function-return-type": "off"
     },
-    "ignorePatterns": ["out", "dist", "**/*.d.ts"]
+    "ignorePatterns": ["out", "dist", "**/*.d.ts", "**/test/**"]
 }
