@@ -8,5 +8,10 @@
     "typescript.tsc.autoDetect": "off",
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
-    "html.format.wrapLineLength": 120
+    "html.format.wrapLineLength": 120,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true,
+        "source.organizeImports": true
+    },
+    "eslint.validate": ["javascript"]
 }
