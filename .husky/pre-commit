@@ -4,7 +4,7 @@
 echo "husky precommit hook"
 
 echo "check and fix code linting"
-npm run lint 
+npm run lint --fix
 
 echo "check and fix code format"
 npx prettier --write .

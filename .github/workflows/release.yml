@@ -1,4 +1,4 @@
-name: 'cd'
+name: 'release'
 
 on:
     push:
@@ -6,7 +6,7 @@ on:
             - release
 
 jobs:
-    cd:
+    release:
         runs-on: ubuntu-latest
 
         steps:
