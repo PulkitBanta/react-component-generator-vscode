@@ -24,20 +24,15 @@ const validateInput = (val: any, errMessage: string): boolean => {
 };
 
 export function activate(context: ExtensionContext) {
-    commands.registerCommand(
-        'react-component-generator.create-react-component',
-        () => {
-            componentPath().then((path) => {
-                if (!validateInput(path, 'No path specified')) {
-                    componentName().then((name) => {
-                        if (
-                            !validateInput(name, 'Component name is required')
-                        ) {
-                            addTemplateFiles(path + '/', name!);
-                        }
-                    });
-                }
-            });
-        }
-    );
+    commands.registerCommand('react-component-generator.create-react-component', () => {
+        componentPath().then(path => {
+            if (!validateInput(path, 'No path specified')) {
+                componentName().then(name => {
+                    if (!validateInput(name, 'Component name is required')) {
+                        addTemplateFiles(path + '/', name!);
+                    }
+                });
+            }
+        });
+    });
 }

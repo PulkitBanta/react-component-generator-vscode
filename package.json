@@ -21,7 +21,8 @@
         "vscode": "^1.61.0"
     },
     "categories": [
-        "Snippets", "Programming Languages"
+        "Snippets",
+        "Programming Languages"
     ],
     "icon": "images/logo.png",
     "galleryBanner": {
@@ -40,25 +41,32 @@
             }
         ]
     },
+    "prettier": "@medly/prettier-config",
     "scripts": {
         "vscode:prepublish": "yarn run compile",
         "compile": "tsc -p ./",
         "watch": "tsc -watch -p ./",
         "pretest": "yarn run compile && yarn run lint",
-        "lint": "eslint src --ext ts",
+        "lint": "eslint src --ext ts --fix",
         "test": "node ./out/test/runTest.js"
     },
     "devDependencies": {
-        "@types/vscode": "^1.61.0",
+        "@commitlint/cli": "^14.1.0",
+        "@commitlint/config-conventional": "^14.1.0",
+        "@medly/prettier-config": "^0.1.0",
         "@types/glob": "^7.1.4",
         "@types/mocha": "^9.0.0",
         "@types/node": "14.x",
+        "@types/vscode": "^1.61.0",
         "@typescript-eslint/eslint-plugin": "^4.31.1",
         "@typescript-eslint/parser": "^4.31.1",
+        "@vscode/test-electron": "^1.6.2",
         "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
         "glob": "^7.1.7",
+        "husky": "^7.0.4",
         "mocha": "^9.1.1",
-        "typescript": "^4.4.3",
-        "@vscode/test-electron": "^1.6.2"
+        "typescript": "^4.4.3"
     }
 }

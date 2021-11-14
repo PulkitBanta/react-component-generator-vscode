@@ -4,22 +4,14 @@ import fs = require('fs');
 
 const SUFFIX_LENGTH = 9;
 
-export const templateDir = (): string =>
-    path.join(__dirname + '/../assets/template/');
+export const templateDir = (): string => path.join(__dirname + '/../assets/template/');
 
-export const filePath = (
-    templateFile: string,
-    componentPath: string,
-    componentName: string
-): string => {
+export const filePath = (templateFile: string, componentPath: string, componentName: string): string => {
     const fileName = templateFile.includes('component')
-        ? componentName +
-          templateFile.substring(9, templateFile.length - SUFFIX_LENGTH)
+        ? componentName + templateFile.substring(9, templateFile.length - SUFFIX_LENGTH)
         : templateFile.substring(0, templateFile.length - SUFFIX_LENGTH);
 
-    return (
-        getWorkspaceFolder() + componentPath + componentName + '/' + fileName
-    );
+    return getWorkspaceFolder() + componentPath + componentName + '/' + fileName;
 };
 
 export const getWorkspaceFolder = (): string | undefined => {
@@ -27,33 +19,23 @@ export const getWorkspaceFolder = (): string | undefined => {
         let wf = workspace.workspaceFolders[0].uri.path;
         return wf + '/';
     } else {
-        window.showErrorMessage(
-            'Try to run this command inside a workspace folder'
-        );
+        window.showErrorMessage('Try to run this command inside a workspace folder');
         return undefined;
     }
 };
 
-export const addTemplateFiles = (
-    componentPath: string,
-    componentName: string
-) => {
+export const addTemplateFiles = (componentPath: string, componentName: string) => {
     fs.readdir(templateDir(), (err, files) => {
         if (err) {
             window.showErrorMessage('files not found');
         } else {
-            files.forEach((file) => {
+            files.forEach(file => {
                 fs.readFile(templateDir() + file, (err, content) => {
                     if (err) {
-                        window.showErrorMessage(
-                            'Error occurred while creating the component'
-                        );
+                        window.showErrorMessage('Error occurred while creating the component');
                         return;
                     }
-                    workspace.fs.writeFile(
-                        Uri.file(filePath(file, componentPath, componentName)),
-                        content
-                    );
+                    workspace.fs.writeFile(Uri.file(filePath(file, componentPath, componentName)), content);
                 });
             });
         }

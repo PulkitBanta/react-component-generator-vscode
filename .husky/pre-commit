@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "husky precommit hook"
+
+echo "check and fix code linting"
+npm run lint 
+
+echo "check and fix code format"
+npx prettier --write .
