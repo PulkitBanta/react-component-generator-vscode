@@ -1,6 +1,7 @@
-import { workspace, window, Uri } from 'vscode';
+import { Uri, window, workspace } from 'vscode';
 import path = require('path');
 import fs = require('fs');
+// import Buffer = require('buffer');
 
 const SUFFIX_LENGTH = 9;
 
@@ -35,7 +36,8 @@ export const addTemplateFiles = (componentPath: string, componentName: string) =
                         window.showErrorMessage('Error occurred while creating the component');
                         return;
                     }
-                    workspace.fs.writeFile(Uri.file(filePath(file, componentPath, componentName)), content);
+                    const updatedContent = content.toString().replace(/Component/gi, componentName);
+                    workspace.fs.writeFile(Uri.file(filePath(file, componentPath, componentName)), Buffer.from(updatedContent));
                 });
             });
         }
