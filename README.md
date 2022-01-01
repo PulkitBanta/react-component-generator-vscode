@@ -1,15 +1,17 @@
 # react-component-generator
 
-Generate react component boilerplate code.
-
-## Features
-
-Generate a react component with Component name as folder name inside the directory/path specified by the user.
+React component boilerplate code generator with typescript.
 
 ![Create React Component Example](https://user-images.githubusercontent.com/43134750/139830943-4ca9cb2a-bc5f-4a8a-9810-1981ac14739a.gif)
 
-## Release Notes
+## How to use
 
-### 1.0.0
+- Install the extension [here](https://marketplace.visualstudio.com/items?itemName=PulkitBanta.react-component-generator).
+- Open command pallete `Ctrl + Shift + P` (windows) or `Cmd + Shift + P` (mac).
+- Search `Create React Component` and hit enter.
+- Enter path of the component eg `src/components`. This is the parent folder inside which your component will be created.
+- Enter name of the component eg `Header`. This is the component name and the folder which will contain the component
 
-Create react component boilerplate
+## Contributing
+
+The project is open to all sort of contributions.
