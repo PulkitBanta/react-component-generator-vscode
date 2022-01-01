@@ -1,9 +1,9 @@
 {
     "name": "react-component-generator",
     "displayName": "React Component Generator",
-    "description": "Generate react component with sample code in vscode",
+    "description": "React component boilerplate generator with typescript",
     "publisher": "pulkitbanta",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "author": {
         "name": "pulkit banta"
     },
