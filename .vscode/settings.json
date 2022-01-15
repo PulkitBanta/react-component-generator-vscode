@@ -13,5 +13,5 @@
     "editor.formatOnSave": true,
     "editor.wordWrap": "on",
     "html.format.wrapLineLength": 120,
-    "eslint.validate": ["javascript"]
+    "eslint.validate": ["javascript", "typescript"]
 }
