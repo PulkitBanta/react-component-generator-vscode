@@ -5,5 +5,5 @@ describe('Component', () => {
     it('should render properly', () => {
         const { container } = render(<Component />);
         expect(container).toMatchSnapshot();
-    })
-})
+    });
+});
